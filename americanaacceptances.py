@@ -8,7 +8,7 @@ def fazer_raspagem():
     url = "https://www.earj.com.br/university-acceptances/"
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "html.parser")
-    container = soup.find("div", class_="entry-content")  # Encontra o elemento que contém a tabela
+    container = soup.find("div", class_="panel-body")  # Encontra o elemento que contém a tabela
 
     if container is None:
         st.write("Tabela não encontrada.")
